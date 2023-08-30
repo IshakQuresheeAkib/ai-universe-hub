@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- daisyUI and tailwind CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&display=swap');
+        body{
+            font-family: 'Work Sans',sans-serif;
+            box-sizing: border-box;
+        }
+    </style>
+    <title>AI Universe Hub</title>
+</head>
+<body>
+    <header class="my-10 mx-auto text-center">
+        <h1 class="text-5xl font-bold mb-7 text-stone-700">AI Universe Hub</h1>
+        <button class="btn-error btn normal-case text-white font-normal w-32" id="sort-date">Sort By Date</button>
+    </header>
+    <main class="mx-auto text-center">
+        <section class="mx-14 mb-20">
+            <div id="card-container" class="grid lg:grid-cols-3 md:grid-cols-2 gap-8 items-stretch"></div>
+            <div class="mt-10">
+                <button class="btn-error btn normal-case text-white font-normal w-32" id="see-more-button" onclick="seeMore()">See More</button>
+            </div>
+        </section>
+        <section class="mb-20" id="modal">
+            <!-- You can open the modal using ID.showModal() method -->
+            <dialog id="my_modal_3" class="modal">
+            <form method="dialog" class="modal-box max-w-6xl">
+                <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                <div id="modal-container" class="flex lg:flex-row flex-col justify-center lg:items-stretch">
+                    <!-- <div class="rounded-xl shadow-sm border text-left p-5 space-y-4 m-4 flex-1 bg-red-300 w-1/2">
+                        <h1 class="text-2xl font-semibold"></h1>
+                        <div class=" text-center flex md:flex-row flex-col justify-center gap-8 items-stretch max-w-full">
+                            <p class="bg-white p-8 text-xs rounded-2xl flex-1 flex items-center">$10/month Basic</p>
+                            <p class="bg-white p-8 text-xs rounded-2xl flex-1 flex items-center">$50/month Pro</p>
+                            <p class="bg-white p-8 text-xs rounded-2xl flex-1 flex items-center">Contact us Enterprise</p>
+                        </div>
+                        <div class="flex md:flex-row flex-col justify-between items-center">
+                            <div class="flex-1">
+                                <h1 class="text-2xl font-semibold">Features</h1>
+                                <ul class="list-inside list-disc">
+                                    <li>ball</li>
+                                </ul>
+                              </div>
+                              <div class="flex-1">
+                                <h1 class="text-2xl font-semibold">Features</h1>
+                                <ul class="list-inside list-disc">
+                                    <li>ball</li>
+                                </ul>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="rounded-xl shadow-sm border p-5 space-y-4 m-4 flex-1">
+                        <figure class="">
+                          <img src="./chatgpt_assistente 1.png" alt="Shoes" class="rounded-xl  mx-auto" />
+                        </figure>
+                        <div class="space-y-4 text-center">
+                          <h2 class="font-semibold text-2xl">Hi, how are you doing today?</h2>
+                          <p class="text-md font-normal text-[#585858]">I'm doing well, thank you for asking. How can I assist you today?</p>
+                        </div>
+                    </div> -->
+                </div>  
+            </form>
+            </dialog>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
